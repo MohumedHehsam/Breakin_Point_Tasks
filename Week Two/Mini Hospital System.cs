@@ -142,6 +142,10 @@ class Doctor : Person
     {
         this.specialization = specialization;
     }
+        public override string ToString()
+    {
+        return $" Dotror {name} is a {specialization.ToString()}";
+    }
 }
 class Patient : Person
 {
@@ -152,6 +156,10 @@ class Patient : Person
             throw new ArgumentException("Age must be positive");
 
         this.age = age;
+    }
+            public override string ToString()
+    {
+        return $" person {name}  has {age} years";
     }
 }
 
